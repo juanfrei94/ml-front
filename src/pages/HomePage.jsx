@@ -1,3 +1,7 @@
 export const HomePage = () => {
-  return <div>HomePage</div>;
+  return (
+    <sectio>
+      <h1 >Mercado Libre</h1>
+    </sectio>
+  );
 };
