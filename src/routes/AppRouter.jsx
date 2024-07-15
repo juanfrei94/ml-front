@@ -6,6 +6,7 @@ export const AppRouter = () => {
   return (
     <>
       <Header />
+
       <Routes>
         <Route path="/" element={<HomePage />} exact />
         <Route path="/product" element={<ProductPage />} />
