@@ -1,7 +1,7 @@
 export const HomePage = () => {
   return (
-    <sectio>
-      <h1 >Mercado Libre</h1>
-    </sectio>
+    <section>
+      <h1 className="hidden">Mercado Libre</h1>
+    </section>
   );
 };

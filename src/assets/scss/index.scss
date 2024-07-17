@@ -4,3 +4,17 @@
 @import "./components/buttons";
 @import "./components/margin";
 @import "./components/padding";
+@import "./components/header";
+
+.layout {
+  position: relative;
+}
+
+.hidden {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 13px;
+  z-index: -1;
+  overflow: hidden;
+}

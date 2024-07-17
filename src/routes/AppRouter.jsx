@@ -1,19 +1,17 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import { HomePage, ProductPage } from "../pages";
-import { Header } from "../ui";
+import { Layout } from "../ui";
 
 export const AppRouter = () => {
   return (
-    <>
-      <Header />
-
-      <Routes>
-        <Route path="/" element={<HomePage />} exact />
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<HomePage />} />
         <Route path="/product" element={<ProductPage />} />
+      </Route>
 
-        {/* Wildcard */}
-        <Route path="/*" element={<Navigate to={"/"} />} />
-      </Routes>
-    </>
+      {/* Wildcard */}
+      <Route path="/*" element={<Navigate to={"/"} />} />
+    </Routes>
   );
 };
