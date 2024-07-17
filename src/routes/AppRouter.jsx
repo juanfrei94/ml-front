@@ -1,19 +1,19 @@
 import { Navigate, Route, Routes } from "react-router-dom";
-import { HomePage, ProductPage } from "../pages";
-import { Header } from "../ui";
+import { HomePage, ItemsPage } from "../pages";
+import { Layout } from "../ui";
+import { ItemDetail } from "../components";
 
 export const AppRouter = () => {
   return (
-    <>
-      <Header />
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<HomePage />} />
+        <Route path="/items" element={<ItemsPage />} />
+        <Route path="/items/:id" element={<ItemDetail />} />
+      </Route>
 
-      <Routes>
-        <Route path="/" element={<HomePage />} exact />
-        <Route path="/product" element={<ProductPage />} />
-
-        {/* Wildcard */}
-        <Route path="/*" element={<Navigate to={"/"} />} />
-      </Routes>
-    </>
+      {/* Wildcard */}
+      <Route path="/*" element={<Navigate to={"/"} />} />
+    </Routes>
   );
 };

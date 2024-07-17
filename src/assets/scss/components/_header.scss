@@ -1,0 +1,16 @@
+header {
+  background-color: $yellow-background;
+  padding: 0.5rem 0;
+
+  div.header-container {
+    display: flex;
+    gap: 1rem;
+    padding: 0 5rem;
+  }
+
+  @include screen("mobile") {
+    div.header-container {
+      padding: 0 0.5rem;
+    }
+  }
+}
